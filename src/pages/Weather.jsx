@@ -6,11 +6,13 @@ import MainPage from "../components/MainPage";
 function Weather(){
 
     return (
-        <>
-        <Header/>
-        <MainPage/>
-        <Footer/>
-        </>
+        <div>
+            <div> <Header/></div>
+       
+       <div> <MainPage/></div>
+       <div>  <Footer/></div>
+      
+        </div>
     );
 
 }

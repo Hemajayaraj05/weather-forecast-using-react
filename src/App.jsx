@@ -1,8 +1,13 @@
+import React from "react";
+import Weather from "./pages/Weather";
+
+
 function App(){
 
   return (
     <>
-    <h1>Weather forecasting App</h1>
+     <Weather/>
+
     </>
   )
 

@@ -4,7 +4,7 @@ import {
   Typography,
   Button,
 } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 function MainPage() {
@@ -26,6 +26,18 @@ function MainPage() {
       setWeather(null);
     }
   };
+
+  useEffect(()=>{
+    const interval=setInterval(()=>{
+      if(city)
+      {
+        getWeather();
+      }
+    },60000);
+
+    return()=>clearInterval(interval);
+
+  },[city])
   return (
     <>
       <div className="flex justify-center p-20">
